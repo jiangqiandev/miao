@@ -2,28 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Homework HTML Lorem</title>
+  <title>html练习</title>
 </head>
 <body>
-  <h1>Lorem.</h1>
-  <h2>Lorem ipsum.</h2>
-  <h3>Lorem ipsum dolor.</h3>
+  <hgroup>
+    <h1>Lorem.</h1>
+    <h2>Lorem ipsum.</h2>
+    <h3>Lorem ipsum dolor.</h3>
+  </hgroup>
+
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni nobis alias fuga praesentium. Amet, ut tempora dicta ducimus itaque natus!</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam ex, eos, sunt quidem aliquam molestias. Sed, tempore!</p>
-  <!-- 用无序列表？不确定啊 -->
-  <ul>
-    <li><a href="https://jd.com" target="_blank">open jd.com in a new window</a></li>
-    <li><<a href="mailto:081101110jq@gmail.com">send me an email</a></li>
-    <!-- 锚点 -->
-    <li><a href="#tail">go to bottom</a></li>
-    <li><<a href="" download="sth">click to download this file</a></li>
-    <!-- 不知道下点什么 -->
-  </ul>
-  <img src="https://drscdn.500px.org/photo/229389427/m%3D1170/v2?user_id=7012987&webp=true&sig=196fa0c161aa562478d08571764872f7d69a346c3c0b2e12aa00e2c6414eb28b" width="200" height="200" alt="这是一张葡萄的图片">
+
+  <a href="https://jd.com" target="_blank">open jd.com in a new window</a>
+  <a href="mailto:081101110jq@gmail.com">send me an email</a>
+  <a href="#tail">go to bottom</a>
+  <a href="" download="sth">click to download this file</a>
+
+  <img src="https://drscdn.500px.org/photo/229389427/m%3D1170/v2?user_id=7012987&webp=true&sig=196fa0c161aa562478d08571764872f7d69a346c3c0b2e12aa00e2c6414eb28b" width="200" height="200" alt="这是一张葡萄的图片" title="image description">
+ 
   <hr/>
   <hr/>
-  <p><em>这几种强调</em><b>有什么区别呢？</b><u>这个呢？</u><i>这个呢？</i></p>
-  <!-- &lt;!--这段注释需要出现在页面里--&gt; -->
+  
+  <marquee behavior="" direction="">gone with the wind</marquee>
+  <p>
+    <em>这几种强调</em><b>有什么区别呢？</b><u>这个呢？</u><i>这个呢？</i>
+  </p>
+
+  &lt;!--这段注释需要出现在页面里--&gt;
   <p>html的注释怎么写？</p>
   <p>下面是一段javascript代码，最适合用什么标签标示呢</p>
   <pre>
@@ -35,81 +41,94 @@
 
     </code>
   </pre>
+  
   <hr/>
-  <!-- Emmet 不会啊 -->
-  <!-- ul ol -->
+
   <ul>
-    <li>小学
-      <div>
+    <li>
+      <span>primary school</span>
+      <ol>
+      <li>
+        <span>grade one</span>
         <ol>
-          <li>一年级
-            <div>
-              <ol>
-                <li>上学期</li>
-                <li>下学期</li>
-              </ol>
-            </div>
-          </li>
-          <li>二年级</li>
-          <li>三年级</li>
+          <li>1st semester</li>
+          <li>2nd semester</li>
         </ol>
-      </div>
+      </li>
+      <li>grade two</li>
+      <li>grade three</li>
+      </ol>
     </li>
-    <li>中学</li>
-    <li>大学</li>
+    <li>middle school</li>
+    <li>college</li>
   </ul>
+
   <hr/>
-  <!-- description list -->
+
   <dl>
-    <dt>班级
+    <dt>班级</dt>
       <dd>三年二班</dd>
-    </dt>
-    <dt>老师
+    
+    <dt>老师 </dt>
       <dd>张老师</dd>
       <dd>王</dd>
       <dd>李</dd>
-    </dt>
-    <dt>学生
+   
+    <dt>学生</dt>
       <dd>张三</dd>
       <dd>李四</dd>
-    </dt>
   </dl>
   <hr/>
-  <!-- 表单 -->
+  
   <h2>Google Search</h2>
-  <form action="https://www.google.com/" target="_blank">
-    <input type="text" accept="text/*" >
+  <form action="https://www.google.com/search" target="_blank">
+    <input type="text" value="请输入想搜索的内容" disable>
     <!-- 请输入想搜索的内容怎么显示 -->
     <button>在新窗口打开搜索结果</button>
   </form>
+  
   <hr/>
-  <form>
-    <input type="radio" name="gender">男
-    <input type="radio" name="gender">女
-    <select>年龄
-      <option disabled>请选择</option>
-      <optgroup>少年
-        <option>1-6岁</option>
-        <option>6-12岁</option>
-      </optgroup>
-      <optgroup>青年
-        <option>13-15岁</option>
-        <option>16-18岁</option>
-      </optgroup>
-      <optgroup>壮年
-        <option>19-22岁</option>
-        <option>23-30岁</option>
-      </optgroup>
-    </select>
-    <input type="calendar" name="">
-    <input type="img" accept="image/*">
-    <input type="color">
-    
+  
+  <form action="">
+    <dl>
+      <span>个人信息调查表</span>
+      <dt>gender</dt>
+        <dd>
+          <label for=""><input type="radio" name="gender" value="male">男</label>
+          <label for=""><input type="radio" name="gender" value="female">女</label>
+        </dd>
 
+      <dt>age</dt>
+        <select name="age" id="">
+          <option value="请选择"></option>
+          <optgroup>少年</optgroup>
+            <option value="">1-6</option>
+            <option value="">7-12</option>
+
+          <optgroup>青年</optgroup>
+            <option value="">13-15</option>
+            <option value="">16-25</option>
+
+          <optgroup>壮年</optgroup>
+            <option value="">25-30</option>
+            <option value="">31-40</option>
+        
+
+      <dt>birthday</dt>
+      <dt>photo</dt>
+      <dt>complexion</dt>
+      <dt>self-intro</dt>
+      <dt>disabled</dt>
+      <dt></dt>
+
+
+    </dl>
   </form>
 
 
-
   
+
+
+  <div id="tail">bottom the the page</div>
 </body>
 </html>
